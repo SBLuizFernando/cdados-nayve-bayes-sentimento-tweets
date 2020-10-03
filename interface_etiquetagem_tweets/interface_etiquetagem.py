@@ -28,8 +28,8 @@ def exibir(surface, text, pos, font, color=pygame.Color('black')):
         x = pos[0]  
         y += word_height  
 
-df = pd.read_excel("mensagens_1.xlsx")
-tweets = df['metade_1'].tolist()
+df = pd.read_excel("mensagens_2B.xlsx")
+tweets = df['Tweets'].tolist()
 
 font = pygame.freetype.Font("OpenSansEmoji.ttf", 30)
 
@@ -101,7 +101,7 @@ while not done:
 
 df["Etiquetas"] = lista_classificacao
 
-df.to_excel("tabela_etiquetada.xlsx", index=False)
+df.to_excel("tabela_etiquetada_2A.xlsx", index=False)
                 
 exibir(screen, "Fim da etiquetagem!", (20, 20), font)
 pygame.display.flip()
